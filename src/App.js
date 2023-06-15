@@ -1,22 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import BusinessList from './BusinessList';
+import SearchBar from './SearchBar';
+
+const business = [
+  {
+  imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+  name: 'Samgyeopsal Grill',
+  address: 'Gwangjin-gu',
+  city: 'Seoul',
+  state: 'Korea',
+  zipCode: '10101',
+  category: 'Korean',
+  rating: 4.5,
+  reviews: 90,
+  id: 1
+},
+{
+  imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+  name: 'Kimchi factory',
+  address: 'Haeundae-gu',
+  city: 'Busan',
+  state: 'Korea',
+  zipCode: '3407',
+  category: 'Korean',
+  rating: 4,
+  reviewCount: 100,
+  id: 2
+},
+];
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Seoul Restaurants</h1>
+        <SearchBar />
+        <BusinessList business={business} />
       </header>
     </div>
   );
