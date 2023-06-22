@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Business({name, address, city, state, zipCode, category, rating, reviews, imageSrc, id}) {
 
   return (
     <div>
+      <h5>Single business component</h5>
         <div className='restaurant-list' key={id}>
           <img src={imageSrc} alt=''/>
           <h1>Name: {name}</h1>

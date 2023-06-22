@@ -5,7 +5,7 @@ function BusinessList({business}) {
 
   return (
     <div>
-        <h2>Business List Component</h2>
+        <h4>Business List Component</h4>
           {business.map(item => {
             return (
               <Business

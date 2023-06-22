@@ -1,6 +1,7 @@
-import './App.css';
+import React, { useState } from 'react';
 import BusinessList from './BusinessList';
 import SearchBar from './SearchBar';
+import './App.css';
 
 const business = [
   {
@@ -34,7 +35,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Seoul Restaurants</h1>
         <SearchBar />
         <BusinessList business={business} />
       </header>
